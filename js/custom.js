@@ -35,23 +35,42 @@ $(document).ready(function(){
             'background': '#ff0',
             'font-weight': '100',
         });
-
+        
      });
 
+     $('.featured-item h4').click( function(){
+
+      $(this).css({
+          'color': '#f00',
+          'background': '#ff0',
+          'font-weight': '100',
+      });
+      
+    });
+    $('.featured-item a').click(function(event){
+       
+        let titulo = $(this).attr("id"); // tag
+        
+       
+        $('.modal h5').text(titulo);
+        
+      
+
+
+
+    })
      /*
       * Manipulação de eventos
       */
-     $('.featured-item a').on('blur', function(event){
+     /*$('.featured-item a').on('blur', function(event){
 
         event.preventDefault();
 
         alert('Produto esgotado');
 
-     })
+     });*/
      
-     
-     
-     
+ 
 
 
 
